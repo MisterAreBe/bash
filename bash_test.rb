@@ -3,9 +3,11 @@ require_relative "tdd_bash.rb"
 
 class TddBash < Minitest::Test
 
-    def test_assert_equal_1_is_1
-        assert_equal(1, 1)
+    def test_lottery_returns_numbers
+        assert_equals(Integer, lottery_match("", "").class)
     end
 
-    
+
+
+
 end
