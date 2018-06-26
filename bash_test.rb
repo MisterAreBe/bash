@@ -19,7 +19,11 @@ class TddBash < Minitest::Test
         assert_equal(4, lottery_match("1234", "1234"))
     end
 
-
-
+    def test_incorrect_input_returns_no_valid_ticket
+        assert_equal("No valid ticket!", lottery_match(8520, "8520"))
+    end
     
+
+
+
 end
