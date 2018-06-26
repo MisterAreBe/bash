@@ -35,5 +35,8 @@ class TddBash < Minitest::Test
         assert_equal([2, 1, 1, 3], check_ticket(["1146", "1234", "1256", "1119"], "1111"))
     end
 
+    def test_list_ammount_of_off_numbers
+        assert_equal([1], off_ticket(["1111"], "1112"))
+    end
 
 end
