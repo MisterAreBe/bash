@@ -19,5 +19,16 @@ def check_ticket(bought_tickets, golden_ticket)
 end
 
 def you_won(bought_tickets, golden_ticket)
-    [1]
+    winarr = []
+    golden_ticket.each do |num|
+        matches = check_ticket(bought_tickets, num)
+        winners = 0
+        matches.each do |m|
+            if m == 0
+                winners += 1
+            end
+        end
+        winarr << winners
+    end
+    winarr
 end
