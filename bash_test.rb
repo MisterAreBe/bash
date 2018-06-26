@@ -24,9 +24,11 @@ class TddBash < Minitest::Test
     end
 
     def test_check_ticket_class_array
-        assert_equal(Array, check_ticket().class)
+        assert_equal(Array, check_ticket([], "").class)
     end
 
-
+    def test_how_many_numbers_your_ticket_is_off_by
+        assert_equal([0, 1, 2, 3], check_ticket(["1246", "3124", "3512", "3571"], "3570"))
+    end
 
 end

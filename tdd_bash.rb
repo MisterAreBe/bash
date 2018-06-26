@@ -13,6 +13,6 @@ def lottery_match(my_ticket, winning_ticket)
     matching_numers
 end 
 
-def check_ticket()
+def check_ticket(bought_tickets, golden_ticket)
     []
 end
