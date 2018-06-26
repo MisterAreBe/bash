@@ -15,4 +15,11 @@ class TddBash < Minitest::Test
         assert_equal(1, lottery_match("1234", "1567"))
     end
 
+    def test_all_matching_returns_4
+        assert_equal(4, lottery_match("1234", "1234"))
+    end
+
+
+
+    
 end
