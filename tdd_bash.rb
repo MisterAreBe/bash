@@ -18,3 +18,6 @@ def check_ticket(bought_tickets, golden_ticket)
     checker
 end
 
+def you_won(bought_tickets, golden_ticket)
+    [1]
+end
