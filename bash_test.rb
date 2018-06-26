@@ -19,10 +19,6 @@ class TddBash < Minitest::Test
         assert_equal(0, lottery_match("1234", "1234"))
     end
 
-    def test_incorrect_input_returns_no_valid_ticket
-        assert_equal("No valid ticket!", lottery_match(8520, "8520"))
-    end
-
     def test_check_ticket_class_array
         assert_equal(Array, check_ticket([], "").class)
     end
@@ -33,6 +29,10 @@ class TddBash < Minitest::Test
 
     def test_how_off_each_ticket_is_v2
         assert_equal([2, 3, 3, 1], check_ticket(["1146", "1234", "1256", "1119"], "1111"))
+    end
+
+    def test_how_many_winners
+        assert_equal([1], you_won(["1234", "5678", "3570", "1647"], ["3570"]))
     end
 
 end
