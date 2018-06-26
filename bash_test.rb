@@ -31,4 +31,9 @@ class TddBash < Minitest::Test
         assert_equal([1, 2, 3, 4], check_ticket(["1246", "3124", "3512", "3571"], "3570"))
     end
 
+    def test_how_far_off_your_tickets_are_v2
+        assert_equal([2, 3, 3, 1], check_ticket(["1146", "1234", "1256", "1119"], "1111"))
+    end
+
+    
 end
