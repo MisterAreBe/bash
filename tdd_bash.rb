@@ -1,4 +1,7 @@
 def lottery_match(my_ticket, winning_ticket)
+    unless my_ticket.is_a?(String) && winning_ticket.is_a?(String)
+        return "No valid ticket!"
+    end
     my_ticket = my_ticket.split('')
     winning_ticket = winning_ticket.split('')
     matching_numers = 0
