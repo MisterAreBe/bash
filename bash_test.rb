@@ -11,5 +11,8 @@ class TddBash < Minitest::Test
         assert_equal(0, lottery_match("7894", "5612"))
     end
 
+    def test_returns_1_for_1_match
+        assert_equal(1, lottery_match("1234", "1567"))
+    end
 
 end
