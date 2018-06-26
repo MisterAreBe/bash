@@ -7,7 +7,9 @@ class TddBash < Minitest::Test
         assert_equal(Integer, lottery_match("", "").class)
     end
 
-
+    def test_returns_0_for_no_match
+        assert_equal(0, lottery_match("7894", "5612"))
+    end
 
 
 end
