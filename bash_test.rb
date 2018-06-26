@@ -7,16 +7,16 @@ class TddBash < Minitest::Test
         assert_equal(Integer, lottery_match("", "").class)
     end
 
-    def test_returns_0_for_no_match
-        assert_equal(0, lottery_match("7894", "5612"))
+    def test_returns_4_for_no_match
+        assert_equal(4, lottery_match("7894", "5612"))
     end
 
-    def test_returns_1_for_1_match
-        assert_equal(1, lottery_match("1234", "1567"))
+    def test_returns_3_for_1_match
+        assert_equal(3, lottery_match("1234", "1567"))
     end
 
-    def test_all_matching_returns_4
-        assert_equal(4, lottery_match("1234", "1234"))
+    def test_all_matching_returns_0
+        assert_equal(0, lottery_match("1234", "1234"))
     end
 
     def test_incorrect_input_returns_no_valid_ticket
@@ -27,16 +27,12 @@ class TddBash < Minitest::Test
         assert_equal(Array, check_ticket([], "").class)
     end
 
-    def test_how_many_matches_on_each_ticket
-        assert_equal([0, 1, 2, 3], check_ticket(["1246", "3124", "3512", "3571"], "3570"))
+    def test_how_off_each_ticket_is
+        assert_equal([4, 3, 2, 1], check_ticket(["1246", "3124", "3512", "3571"], "3570"))
     end
 
-    def test_how_many_matches_on_each_ticket_v2
-        assert_equal([2, 1, 1, 3], check_ticket(["1146", "1234", "1256", "1119"], "1111"))
-    end
-
-    def test_list_ammount_of_off_numbers
-        assert_equal([1], off_ticket(["1111"], "1112"))
+    def test_how_off_each_ticket_is_v2
+        assert_equal([2, 3, 3, 1], check_ticket(["1146", "1234", "1256", "1119"], "1111"))
     end
 
 end

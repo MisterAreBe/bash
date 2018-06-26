@@ -6,7 +6,7 @@ def lottery_match(my_ticket, winning_ticket)
     winning_ticket = winning_ticket.split('')
     matching_numbers = 0
     winning_ticket.each_with_index do |num, index|
-        if num == my_ticket[index]
+        unless num == my_ticket[index]
             matching_numbers += 1
         end
     end
@@ -20,4 +20,3 @@ def check_ticket(bought_tickets, golden_ticket)
     end
     checker
 end
-
