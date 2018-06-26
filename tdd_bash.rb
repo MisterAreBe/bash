@@ -14,5 +14,9 @@ def lottery_match(my_ticket, winning_ticket)
 end 
 
 def check_ticket(bought_tickets, golden_ticket)
-    [1, 2, 3, 4]
+    checker = []
+    bought_tickets.each do |num|
+        checker << lottery_match(num, golden_ticket)
+    end
+    checker
 end
