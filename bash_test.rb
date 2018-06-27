@@ -42,4 +42,8 @@ class TddBash < Minitest::Test
     def test_winners_info
         assert_equal([{"winning tickets"=>1, "others off by"=>[4, 3, 4]}, {"winning tickets"=>2, "others off by"=>[3, 4]}], winner_who(["5421", "5773", "3570", "5421"], ["3570", "5421"]))
     end
+
+    def test_winners_info_v2
+        assert_equal([{"winning tickets"=>1, "others off by"=>[3, 4]}, {"winning tickets"=>0, "others off by"=>[3, 2, 4]}], winner_who(["1345", "5325", "1234"], ["1234", "4321"]))
+    end
 end

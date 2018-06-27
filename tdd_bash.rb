@@ -36,7 +36,7 @@ end
 def winner_who(bought_tickets, golden_ticket)
     info = []
     golden_ticket.each do |num|
-        first = {}
+        tickets = {}
         off_by = check_ticket(bought_tickets, num)
         winners = 0
         others = []
@@ -47,9 +47,9 @@ def winner_who(bought_tickets, golden_ticket)
                 others << off
             end    
         end
-        first.store("winning tickets", winners)
-        first.store("others off by", others)
-        info << first
+        tickets.store("winning tickets", winners)
+        tickets.store("others off by", others)
+        info << tickets
     end
     info
 end
