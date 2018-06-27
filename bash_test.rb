@@ -39,4 +39,7 @@ class TddBash < Minitest::Test
         assert_equal([1, 2], you_won(["5421", "5773", "3570", "5421"], ["3570", "5421"]))
     end
     
+    def test_winners_info
+        assert_equal([[1, 4, 3, 4][2, 3, 4]], winner_who(["5421", "5773", "3570", "5421"], ["3570", "5421"]))
+    end
 end
